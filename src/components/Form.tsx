@@ -1,6 +1,8 @@
 import {
   Box,
   Center,
+  Container,
+  Flex,
   Input,
   InputGroup,
   InputLeftElement,
@@ -11,33 +13,34 @@ import { MdAccountCircle } from "react-icons/Md";
 import { AiFillLock } from "react-icons/Ai";
 
 const Form = () => {
-  return (
-    <Box
-      marginX="450px"
-      marginY="200px"
-      maxW="lg"
-      borderWidth="3px"
-      borderRadius="lg"
-      overflow="hidden"
-      p="20"
-    >
-      <Stack spacing={4}>
-        <InputGroup>
-          <InputLeftElement pointerEvents="none">
-            <MdAccountCircle color="gray.300" />
-          </InputLeftElement>
-          <Input placeholder="Email" />
-        </InputGroup>
+  const boxStyles = {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    textAlign: "center",
+  };
 
-        <InputGroup>
-          <InputLeftElement>
-            <AiFillLock color="gray.300" />
-          </InputLeftElement>
-          <Input placeholder="Password" />
-          <InputRightElement></InputRightElement>
-        </InputGroup>
-      </Stack>
-    </Box>
+  return (
+    <Flex alignItems="center" sx={boxStyles}>
+      <Box maxW="lg" borderWidth={2} borderRadius="lg" overflow="hidden" p="20">
+        <Stack>
+          <InputGroup>
+            <InputLeftElement pointerEvents="none">
+              <MdAccountCircle color="gray.300" />
+            </InputLeftElement>
+            <Input placeholder="Email" />
+          </InputGroup>
+
+          <InputGroup>
+            <InputLeftElement>
+              <AiFillLock color="gray.300" />
+            </InputLeftElement>
+            <Input placeholder="Password" />
+            <InputRightElement></InputRightElement>
+          </InputGroup>
+        </Stack>
+      </Box>
+    </Flex>
   );
 };
 
