@@ -1,47 +1,69 @@
 import {
-	Box,
-	Card,
-	Center,
-	Container,
-	Flex,
-	Input,
-	InputGroup,
-	InputLeftElement,
-	InputRightElement,
-	Stack,
+  Box,
+  Button,
+  Card,
+  CardHeader,
+  Heading,
+  Input,
+  InputGroup,
+  InputLeftElement,
+  Stack,
 } from "@chakra-ui/react";
 import { MdAccountCircle } from "react-icons/Md";
 import { AiFillLock } from "react-icons/Ai";
+import React from "react";
+import clouds from "../assets/clouds.jpg";
 
 const Form = () => {
-	const boxStyles = {
-		display: "flex",
-		alignItems: "center",
-		justifyContent: "center",
-		textAlign: "center",
-	};
+  const [show, setShow] = React.useState(false);
 
-	return (
-		<Box height="100vh" sx={boxStyles}>
-			<Box maxW="lg" borderWidth={2} borderRadius="lg" overflow="hidden" p="20">
-				<Stack>
-					<InputGroup>
-						<InputLeftElement pointerEvents="none">
-							<MdAccountCircle color="gray.300" />
-						</InputLeftElement>
-						<Input placeholder="Email" />
-					</InputGroup>
+  const boxStyles = {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    textAlign: "center",
+  };
 
-					<InputGroup>
-						<InputLeftElement>
-							<AiFillLock color="gray.300" />
-						</InputLeftElement>
-						<Input placeholder="Password" />
-					</InputGroup>
-				</Stack>
-			</Box>
-		</Box>
-	);
+  return (
+    <Box
+      height="100vh"
+      sx={boxStyles}
+      bgImage={clouds}
+      backgroundPosition="center"
+      // backgroundRepeat="no-repeat"
+    >
+      <Card
+        maxW="lg"
+        borderWidth={2}
+        borderRadius="lg"
+        overflow="hidden"
+        p="20"
+      >
+        <CardHeader>
+          <Heading size="md">Sign in</Heading>
+        </CardHeader>
+        <Stack>
+          <InputGroup>
+            <InputLeftElement pointerEvents="none">
+              <MdAccountCircle color="gray.300" />
+            </InputLeftElement>
+            <Input placeholder="Email" />
+          </InputGroup>
+
+          <InputGroup>
+            <InputLeftElement>
+              <AiFillLock color="gray.300" />
+            </InputLeftElement>
+            <Input placeholder="Password" type={show ? "text" : "password"} />
+          </InputGroup>
+        </Stack>
+
+        <Button className="btn btn-primary" marginY={4}>
+          Log in
+        </Button>
+      </Card>
+    </Box>
+  );
 };
 
 export default Form;
