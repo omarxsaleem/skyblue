@@ -3,6 +3,7 @@ import {
   Button,
   Card,
   CardHeader,
+  HStack,
   Heading,
   Input,
   InputGroup,
@@ -37,30 +38,42 @@ const Form = () => {
         borderWidth={2}
         borderRadius="lg"
         overflow="hidden"
-        p="20"
+        p="50"
+        bgColor="#002244"
       >
         <CardHeader>
-          <Heading size="md">Sign in</Heading>
+          <Heading fontSize="2em" marginY={4}>
+            Sign in
+          </Heading>
         </CardHeader>
         <Stack>
           <InputGroup>
             <InputLeftElement pointerEvents="none">
               <MdAccountCircle color="gray.300" />
             </InputLeftElement>
-            <Input placeholder="Email" />
+            <Input width={340} placeholder="Email" />
           </InputGroup>
 
           <InputGroup>
             <InputLeftElement>
               <AiFillLock color="gray.300" />
             </InputLeftElement>
-            <Input placeholder="Password" type={show ? "text" : "password"} />
+            <Input
+              width={340}
+              placeholder="Password"
+              type={show ? "text" : "password"}
+            />
           </InputGroup>
         </Stack>
 
-        <Button className="btn btn-primary" marginY={4}>
-          Log in
-        </Button>
+        <HStack marginX={20}>
+          <Button colorScheme="purple" marginY={4}>
+            Sign up
+          </Button>
+          <Button colorScheme="purple" className="btn btn-primary" marginY={4}>
+            Log in
+          </Button>
+        </HStack>
       </Card>
     </Box>
   );
