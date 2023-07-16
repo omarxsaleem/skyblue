@@ -15,7 +15,7 @@ import { AiFillLock } from "react-icons/Ai";
 import React, { FormEvent, useRef } from "react";
 import clouds from "../assets/clouds.jpg";
 
-const Form = () => {
+const Login = () => {
   const [show, setShow] = React.useState(false);
 
   const boxStyles = {
@@ -99,4 +99,4 @@ const Form = () => {
   );
 };
 
-export default Form;
+export default Login;
