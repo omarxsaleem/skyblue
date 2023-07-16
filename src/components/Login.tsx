@@ -14,8 +14,10 @@ import { MdAccountCircle } from "react-icons/Md";
 import { AiFillLock } from "react-icons/Ai";
 import React, { FormEvent, useRef } from "react";
 import clouds from "../assets/clouds.jpg";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
+  const navigate = useNavigate();
   const [show, setShow] = React.useState(false);
 
   const boxStyles = {
@@ -81,7 +83,11 @@ const Login = () => {
           </Stack>
 
           <HStack marginX={20}>
-            <Button colorScheme="purple" marginY={4}>
+            <Button
+              onClick={() => navigate("/signup")}
+              colorScheme="purple"
+              marginY={4}
+            >
               Sign up
             </Button>
             <Button
