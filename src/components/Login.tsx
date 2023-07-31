@@ -14,7 +14,7 @@ import { MdAccountCircle } from "react-icons/Md";
 import { AiFillLock } from "react-icons/Ai";
 import React, { FormEvent, useRef } from "react";
 import clouds from "../assets/clouds.jpg";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -83,13 +83,11 @@ const Login = () => {
           </Stack>
 
           <HStack marginX={20}>
-            <Button
-              onClick={() => navigate("/signup")}
-              colorScheme="purple"
-              marginY={4}
-            >
-              Sign up
-            </Button>
+            <Link to="/signup">
+              <Button colorScheme="purple" marginY={4}>
+                Sign up
+              </Button>
+            </Link>
             <Button
               colorScheme="purple"
               className="btn btn-primary"

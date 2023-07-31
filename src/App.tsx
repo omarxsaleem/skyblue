@@ -1,11 +1,9 @@
 import { Grid, GridItem, Show } from "@chakra-ui/react";
-import Form from "./components/Login";
-import { Routes, Route } from "react-router-dom";
-import Signup from "./components/Signup";
 import NavBar from "./components/NavBar";
 import Home from "./components/Flights";
 
 function App() {
+<<<<<<< HEAD
 	return (
 		<>
 			<Routes>
@@ -26,6 +24,23 @@ function App() {
 			</Grid>
 		</>
 	);
+=======
+  return (
+    <>
+      <Grid
+        templateAreas={{
+          base: `"nav" "main"`,
+          lg: `"nav nav" "aside main"`,
+        }}
+      >
+        <GridItem area="nav" bg="#002244">
+          <NavBar />
+        </GridItem>
+        <Show above="lg"></Show>
+      </Grid>
+    </>
+  );
+>>>>>>> Cleaned up router stuff
 }
 
 export default App;
