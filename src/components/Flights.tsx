@@ -1,4 +1,4 @@
-import { useToast } from "@chakra-ui/react";
+import { Spinner, useToast } from "@chakra-ui/react";
 import useFlights from "../hooks/useFlights";
 
 const Home = () => {
@@ -14,14 +14,23 @@ const Home = () => {
 	// Get all flights for a given day from a dep station to an arr station
 	const { data: flights, error, isLoading } = useFlights(params);
 
-	if (isLoading) return <p>Loading...</p>;
+	if (isLoading)
+		return (
+			<Spinner
+				thickness="4px"
+				speed="0.65s"
+				emptyColor="gray.200"
+				color="blue.500"
+				size="md"
+			/>
+		);
 
 	if (error)
 		return toast({
 			title: "API reached it's limit!",
-			description: "Please give us your email so we can create a new account.",
+			description: error.message,
 			status: "error",
-			duration: 5000,
+			duration: 3000,
 			isClosable: true,
 		});
 
