@@ -7,6 +7,7 @@ import App from "./App";
 import "./index.css";
 import {
 <<<<<<< HEAD
+<<<<<<< HEAD
 	BrowserRouter,
 	RouterProvider,
 	createBrowserRouter,
@@ -15,13 +16,17 @@ import {
   RouterProvider,
   createBrowserRouter,
 >>>>>>> Cleaned up router stuff
+=======
+	BrowserRouter,
+	RouterProvider,
+	createBrowserRouter,
+>>>>>>> Revert changes in Flight.tsx and main.tsx
 } from "react-router-dom";
 import router from "./routing/routes";
 
 const queryClient = new QueryClient();
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
-<<<<<<< HEAD
 	<React.StrictMode>
 		<ChakraProvider>
 			<BrowserRouter>
@@ -32,11 +37,4 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
 			</BrowserRouter>
 		</ChakraProvider>
 	</React.StrictMode>
-=======
-  <React.StrictMode>
-    <ChakraProvider>
-      <RouterProvider router={router} />
-    </ChakraProvider>
-  </React.StrictMode>
->>>>>>> Cleaned up router stuff
 );
