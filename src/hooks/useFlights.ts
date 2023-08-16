@@ -2,7 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 
 const BASE_URL = "https://flight-info-api.p.rapidapi.com/schedules";
-const API_KEY = "195d0fe5b4msh3ee733116426d0ap1e60d3jsnc41f2eac5ce7";
+const API_KEY = "ebcf6ee3ffmshae59305a15c167ep157ba9jsn74cd56540fcc";
 const API_HOST = "flight-info-api.p.rapidapi.com";
 const API_VERSION = "v2";
 const CARRIER_CODE = "UA";
