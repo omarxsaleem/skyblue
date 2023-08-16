@@ -5,24 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import App from "./App";
 import "./index.css";
-import {
-<<<<<<< HEAD
-<<<<<<< HEAD
-	BrowserRouter,
-	RouterProvider,
-	createBrowserRouter,
-=======
-  BrowserRouter,
-  RouterProvider,
-  createBrowserRouter,
->>>>>>> Cleaned up router stuff
-=======
-	BrowserRouter,
-	RouterProvider,
-	createBrowserRouter,
->>>>>>> Revert changes in Flight.tsx and main.tsx
-} from "react-router-dom";
-import router from "./routing/routes";
+import { BrowserRouter } from "react-router-dom";
 
 const queryClient = new QueryClient();
 
